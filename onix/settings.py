@@ -55,7 +55,7 @@ ROOT_URLCONF = 'onix.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'tutorialApp/templates/proyectoWeb'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
