@@ -17,7 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from tutorialApp import views
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home)
+    path('', views.home, name='home'),
+    path('servicios', views.home, name='servicios'),
+    path('tienda', views.home,name='tienda'),
+    path('contacto', views.home, name='contacto'),
+    path('blog', views.home,name='blog'),
 ]
+
+urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
